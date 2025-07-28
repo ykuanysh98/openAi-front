@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 p-4 rounded border whitespace-pre-wrap">
+  <div class="mt-[28px] bg-transparent p-4 rounded border whitespace-pre-wrap">
     {{ message }}
   </div>
 </template>

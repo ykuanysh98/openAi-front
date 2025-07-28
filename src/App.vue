@@ -1,7 +1,7 @@
 <!-- App.vue -->
 <template>
   <div class="min-h-screen bg-[#0B2C66] flex items-center justify-center text-white">
-    <div class="w-full h-full max-w-2xl p-8 space-y-6 flex flex-col gap-20 items-between">
+    <div class="w-full h-full max-w-2xl p-8 flex flex-col items-between">
       <div class="flex flex-col gap-4">
         <img class="w-[50px]" src="./assets/message.png" alt="">
         <h1 class="text-2xl md:text-3xl font-semibold">Hi there!</h1>
@@ -9,7 +9,7 @@
         <p class="text-gray-300">Use one of the most common prompts below or ask your own question</p>
       </div>
 
-      <div class="mt-4 relative">
+      <div class="mt-[100px] relative">
         <!-- Chat Input --> 
         <ChatInput v-model="userMessage" />
 
@@ -21,7 +21,7 @@
           @click="sendToApi"
           class="w-[50px] h-[48px] absolute top-[1px] right-[1px] bg-[#1e4e9b] text-white font-semibold rounded-lg flex items-center justify-center transition hover:bg-[#1e4e9b]/90"
         >
-          <span v-if="isLoading">Sending...</span>
+          <span v-if="isLoading" class="loader"></span>
           <img v-else class="w-[18px]" src="./assets/arrow.png" alt="">
         </button>
       </div>

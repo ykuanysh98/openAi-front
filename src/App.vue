@@ -48,7 +48,7 @@ const isLoading = ref(false)
 const error = ref('')
 
 const sendToApi = async () => {
-  if(isLoading || !userMessage.trim()){
+  if(isLoading.value || !userMessage.value.trim()){
     return;
   }
 
